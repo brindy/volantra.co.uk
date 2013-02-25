@@ -1,0 +1,101 @@
+
+@font-face {
+     font-family: "site";
+     src: url("MyriadWebPro.ttf");
+}
+
+body {
+   margin: auto;
+   background-color: #7a7a7a;
+   background-image: url(../images/gradient.png);
+   font-family: "site", Helvetica, Verdana;
+   color: #515151;
+}
+
+
+#title {
+	font-size: 36pt;
+	margin-left: 40px;
+	color: #939393;
+	
+	border-bottom: 1px solid;
+	margin: 0px;
+	margin-left: 20px;
+	padding: 0px;
+	
+	width: 450px;
+}
+
+#menu {
+	margin: 0px;
+	margin-left: -20px;
+	list-style-type: none;
+}
+
+#menu li {
+	float: left;
+	font-size: 14pt;
+	padding-right: 35px;
+	color: #939393;	
+}
+
+a {
+	color: #939393;	
+	text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+	color: #939393;	
+	text-decoration: none;
+}
+
+a:hover {
+	color: purple;
+}
+
+a.currentpage {
+	color: purple;	
+}
+
+
+img {
+  border: 0px;
+}
+
+#container {
+   display: none;
+   padding: 0px;
+   width: 850;
+   height: 550;
+   background-image: url(../images/feet.png);
+   background-color: #ccc;
+
+/* From : http://www.infinitywebdesign.com/research/cssverticalcentereddiv.htm */
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -425;
+   margin-top: -275;
+   border: 1px solid black;
+
+}
+
+#content {
+	clear: left;
+	margin-top: 30px;
+	padding-left: 20px;
+	xborder: 1px solid red;
+	width: 450px;
+	height: 455px;
+	overflow: auto;
+}
+
+.twitter {
+	vertical-align: middle;
+}
+
+.backwards {
+unicode-bidi:bidi-override; direction: rtl;
+}
+
+

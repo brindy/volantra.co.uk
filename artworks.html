@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>volantra</title>
+
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/galleriffic.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.lightbox-0.5.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+
+<!-- We only want the thunbnails to display when javascript is disabled -->
+<script type="text/javascript">
+	document.write('<style>.noscript { display: none; }</style>');
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#container").fadeIn("slow");
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+
+	<div id="header">
+		<h1 id="title">Volantra</h1>
+
+		<ul id="menu">
+			<li><a href="main.html">Home</a></li>
+			<li><a href="photo.html">Photography</a></li>
+			<li><a href="artworks.html" class="currentpage">Artworks</a></li>
+			<li><a href="credits.html">Credits</a></li>
+			<li><a href="http://www.flickr.com/photos/volantra/" alt="Follow me on Flickr"><img src="images/flickr24x24.png" /></a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<div id="thumbs" class="navigation">
+			<ul class="thumbs noscript">
+				<li>
+					<a class="thumb" href="artworks/art1large.png">
+						<img src="artworks/art1small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>"Pillow talk" 2009</em><br/>
+						Looking at the way in which we respond to depression.<br/>
+						Glass box with plaster pillow<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art2large.png">
+						<img src="artworks/art2small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>"Pillow talk" 2009</em><br/>
+						Comment board.<br/>
+						<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art3large.png">
+						<img src="artworks/art3small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>3D Box 2008</em><br/>
+						3D photography experiment.<br/>
+						Perspex and paper<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art4large.png">
+						<img src="artworks/art4small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>Degree show 2009</em><br/>
+						"Aspiral" and "Pillow talk"<br/>
+						Forth valley college.<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art5large.png">
+						<img src="artworks/art5small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>Fabric Spirals 2009</em><br/>
+						Development work for "Aspiral"<br/>
+						Organic cotton<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art6large.png">
+						<img src="artworks/art6small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>Aspiral 2009</em><br/>
+						Design proposal for the John Rylands Library.<br/>
+						Organic cotton and paper<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art7large.png">
+						<img src="artworks/art7small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>"Aspiral" 2009</em><br/>
+						Development work.<br/>
+						Fabric and paper<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art8large.png">
+						<img src="artworks/art8small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>"Pillow talk" 2009</em><br/>
+						Small development piece<br/>
+						Plaster<br/>
+					</div>
+				</li>
+				<li>
+					<a class="thumb" href="artworks/art9large.png">
+						<img src="artworks/art9small.png" alt="Artwork Title" />
+					</a>
+					<div class="caption">
+						<em>"Aspiral" 2009</em><br/>
+						Small development piece.<br/>
+						Fabric and paper<br/>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	
+	jQuery(document).ready(function($) {
+		
+		// We only want these styles applied when javascript is enabled
+		$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+		$('div.content').css('display', 'block');
+
+		// Initially set opacity on thumbs and add
+		// additional styling for hover effect on thumbs
+		var onMouseOutOpacity = 0.67;
+		$('#thumbs ul.thumbs li').opacityrollover({
+			mouseOutOpacity:   onMouseOutOpacity,
+			mouseOverOpacity:  1.0,
+			fadeSpeed:         'fast',
+			exemptionSelector: '.selected'
+		});
+		
+		// Initialize Advanced Galleriffic Gallery
+		var gallery = $('#thumbs').galleriffic({
+			delay:                     2500,
+			numThumbs:                 9,
+			preloadAhead:              10,
+			enableTopPager:            true,
+			enableBottomPager:         false,
+			maxPagesToShow:            7,
+			imageContainerSel:         '#slideshow',
+			controlsContainerSel:      '#controls',
+			captionContainerSel:       '#caption',
+			loadingContainerSel:       '#loading',
+			renderSSControls:          true,
+			renderNavControls:         true,
+			playLinkText:              'Play Slideshow',
+			pauseLinkText:             'Pause Slideshow',
+			prevLinkText:              '&lsaquo; Previous Photo',
+			nextLinkText:              'Next Photo &rsaquo;',
+			nextPageLinkText:          'Next &rsaquo;',
+			prevPageLinkText:          '&lsaquo; Prev',
+			enableHistory:             false,
+			autoStart:                 false,
+			syncTransitions:           true,
+			defaultTransitionDuration: 900
+		});
+		
+	});
+	
+	$(function() {
+		$('.thumb').lightBox({fixedNavigation:true});
+	});
+	
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-623669-5");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
